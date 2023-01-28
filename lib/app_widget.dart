@@ -1,4 +1,4 @@
-import 'package:cine_flutter/modules/dashboard/screens/dashboard.dart';
+import 'package:cine_flutter/modules/dashboard/screen/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -8,10 +8,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cine Flutter',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Dashboard(),
+      home: const DashboardScreen(),
     );
   }
 }

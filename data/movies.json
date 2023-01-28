@@ -1,0 +1,41 @@
+[
+    {
+        "id": "6306a6ca-df0e-4bd2-82c6-c0d7158a9109",
+        "title": "Avatar: The Way of Water",
+        "thumbUrl": "https://upload.wikimedia.org/wikipedia/pt/5/54/Avatar_The_Way_of_Water_poster.jpg",
+        "about": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+        "categories": [
+            "ffff99f7-3f53-4499-9d11-72408395fcdc",
+            "22c67bdb-fcd7-470c-bd3e-6e5738693588",
+            "6de38926-6b67-46ff-b755-95e55f5d4b4e",
+            "6125c361-1c29-460b-b12a-dd4f276e9fb4"
+        ],
+        "votesNumber": 264000,
+        "rate": 7.8
+    },
+    {
+        "id": "1bed258f-39ae-4807-879a-65288ea4080d",
+        "title": "Babylon",
+        "thumbUrl": "https://upload.wikimedia.org/wikipedia/en/d/d2/BabylonOfficialTheatricalPoster2022.jpeg",
+        "about": "An original epic set in 1920s Los Angeles led by Brad Pitt, Margot Robbie and Diego Calva, with an ensemble cast including Jovan Adepo, Li Jun Li and Jean Smart. A tale of outsized ambition and outrageous excess, it traces the rise and fall of multiple characters during an era of unbridled decadence and depravity in early Hollywood.",
+        "categories": [
+            "74bbd3b1-32fe-47b3-8af4-6ca1c745e7cd",
+            "c1467b46-6656-4d10-a92d-67118f3b36a6"
+        ],
+        "votesNumber": 30000,
+        "rate": 7.6
+    },
+    {
+        "id": "f4eb7f47-2883-4176-9072-f1f488b76884",
+        "title": "The Menu",
+        "thumbUrl": "https://upload.wikimedia.org/wikipedia/en/d/d2/BabylonOfficialTheatricalPoster2022.jpeg",
+        "about": "Expecting nothing less than the best of everything haute cuisine has to offer, a group of ultra-wealthy gastronomes with a demanding palate arrive at the Hawthorn: an exclusive culinary temple run by highly regarded gourmet chef Julian Slowik. And prepared for an exquisite multiple-course meal and the experience of a lifetime, obsessive epicurean Tyler and his unimpressed plus-one Margot enter the private minimalist restaurant. At last, the long wait is over. However, no one knows that the cryptic genius in the kitchen has big plans for tonight. After all, the imperious culinary artist has been stretching the boundaries of taste and fine dining for decades. Now, the host can finally unveil his magnum opus. But is the blasé clientele ready for Julian's creative madness?",
+        "categories": [
+            "74bbd3b1-32fe-47b3-8af4-6ca1c745e7cd",
+            "40fbca51-9a00-40be-9fa2-381ceb13f3c0",
+            "70fd228e-f039-4468-8fc5-e7864d16d2ba"
+        ],
+        "votesNumber": 187000,
+        "rate": 7.2
+    }
+]
