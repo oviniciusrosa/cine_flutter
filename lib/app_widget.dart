@@ -1,4 +1,5 @@
 import 'package:cine_flutter/modules/dashboard/screen/dashboard_screen.dart';
+import 'package:cine_flutter/routes.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -14,6 +15,7 @@ class App extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF0B0B16),
       ),
       home: const DashboardScreen(),
+      routes: Routes.list,
     );
   }
 }

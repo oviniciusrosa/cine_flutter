@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
 
+  static String route = "dashboard";
+
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
 }
