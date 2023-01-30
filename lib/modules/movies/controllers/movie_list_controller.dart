@@ -3,14 +3,26 @@ import 'package:cine_flutter/modules/movies/domain/repository/movie_repository.d
 import 'package:flutter/cupertino.dart';
 
 class MovieListController extends ChangeNotifier {
-  List<Movie> list = [];
-
   MovieListController() {
     _initData();
   }
 
+  int index = 0;
+  List<Movie> list = [];
+
   Future<void> _initData() async {
     list = await MovieRepository.getAll();
     notifyListeners();
+  }
+
+  void pageChanged(int i) {
+    index = i;
+    notifyListeners();
+  }
+
+  Movie? get movie {
+    if (list.isEmpty) return null;
+
+    return list[index];
   }
 }
