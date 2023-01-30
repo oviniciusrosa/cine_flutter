@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cine_flutter/common/animations/fade_entrance.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class BlurredImageBg extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(image),
+            image: CachedNetworkImageProvider(image),
             fit: BoxFit.cover,
           ),
         ),
