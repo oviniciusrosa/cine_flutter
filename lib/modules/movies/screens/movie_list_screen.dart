@@ -34,8 +34,7 @@ class MovieListScreen extends StatelessWidget {
 
                     if (controller.pageController.position.haveDimensions) {
                       var factor = index.toDouble() - (controller.pageController.page ?? 0);
-                      scale = scale - factor;
-                      scale = (scale).clamp(0, 1);
+                      scale = (scale - factor).clamp(0, 1);
                     }
                     return Transform.scale(
                       scale: scale,
