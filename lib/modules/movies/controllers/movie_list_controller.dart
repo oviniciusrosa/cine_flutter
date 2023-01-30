@@ -9,6 +9,7 @@ class MovieListController extends ChangeNotifier {
 
   int index = 0;
   List<Movie> list = [];
+  PageController pageController = PageController();
 
   Future<void> _initData() async {
     list = await MovieRepository.getAll();
