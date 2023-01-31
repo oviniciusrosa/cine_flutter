@@ -21,7 +21,7 @@ class _DownTopEntranceState extends State<DownTopEntrance> {
 
   void animate() async {
     await Future.delayed(const Duration(milliseconds: 50));
-    setState(() => offset = const Offset(0, 0));
+    if (mounted) setState(() => offset = const Offset(0, 0));
   }
 
   @override
