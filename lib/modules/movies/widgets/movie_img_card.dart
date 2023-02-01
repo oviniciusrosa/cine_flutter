@@ -23,22 +23,26 @@ class MovieImgCard extends StatelessWidget {
       );
     }
 
-    return Center(
-      child: GestureDetector(
-        onTap: () => Navigator.pushNamed(context, MovieDetails.route, arguments: movie),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(12),
-          child: Hero(
-            tag: image,
-            child: CachedNetworkImage(
-              imageUrl: image,
-              progressIndicatorBuilder: (_, __, ___) {
-                return const Center(child: CircularProgressIndicator());
-              },
-              errorWidget: (_, __, ___) => const Icon(Icons.error),
-              height: MediaQuery.of(context).size.height * 0.6,
-              width: MediaQuery.of(context).size.width * 0.7,
-              fit: BoxFit.cover,
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 20),
+        child: GestureDetector(
+          onTap: () => Navigator.pushNamed(context, MovieDetails.route, arguments: movie),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Hero(
+              tag: image,
+              child: CachedNetworkImage(
+                imageUrl: image,
+                progressIndicatorBuilder: (_, __, ___) {
+                  return const Center(child: CircularProgressIndicator());
+                },
+                errorWidget: (_, __, ___) => const Icon(Icons.error),
+                height: MediaQuery.of(context).size.height * 0.6,
+                width: MediaQuery.of(context).size.width * 0.7,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
