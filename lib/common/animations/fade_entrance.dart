@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
+// ignore: constant_identifier_names
+const DEFAULT_DELAY = Duration(milliseconds: 100);
+
 class FadeEntrance extends StatefulWidget {
   final Widget child;
+  Duration? delay;
 
-  const FadeEntrance({required this.child, Key? key}) : super(key: key);
+  FadeEntrance({
+    required this.child,
+    this.delay,
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<FadeEntrance> createState() => _FadeEntranceState();
@@ -20,7 +28,7 @@ class _FadeEntranceState extends State<FadeEntrance> {
   }
 
   void animate() async {
-    await Future.delayed(const Duration(milliseconds: 100));
+    await Future.delayed(widget.delay ?? DEFAULT_DELAY);
     if (mounted) setState(() => opacityLevel = 1.0);
   }
 
