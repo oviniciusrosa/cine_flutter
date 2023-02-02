@@ -38,27 +38,7 @@ class MovieDetailsAppBar extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            bottom: 0,
-            height: 300,
-            width: MediaQuery.of(context).size.width,
-            child: FadeEntrance(
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                  gradient: const LinearGradient(
-                    begin: Alignment(0.0, 0.5),
-                    end: Alignment(0.0, 0.0),
-                    colors: <Color>[
-                      Color(0x60000000),
-                      Color(0x00000000),
-                    ],
-                  ),
-                ),
-                // child: MovieHeader(movie: movie),
-              ),
-            ),
-          ),
+          const Overlay(),
           Positioned(
             bottom: 20,
             child: MovieHeader(
@@ -67,6 +47,37 @@ class MovieDetailsAppBar extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class Overlay extends StatelessWidget {
+  const Overlay({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: 0,
+      height: 300,
+      width: MediaQuery.of(context).size.width,
+      child: FadeEntrance(
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18),
+            gradient: const LinearGradient(
+              begin: Alignment(0.0, 0.5),
+              end: Alignment(0.0, 0.0),
+              colors: <Color>[
+                Color(0x60000000),
+                Color(0x00000000),
+              ],
+            ),
+          ),
+          // child: MovieHeader(movie: movie),
+        ),
       ),
     );
   }
