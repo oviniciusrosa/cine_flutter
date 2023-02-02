@@ -21,7 +21,7 @@ class _FadeEntranceState extends State<FadeEntrance> {
 
   void animate() async {
     await Future.delayed(const Duration(milliseconds: 100));
-    setState(() => opacityLevel = 1.0);
+    if (mounted) setState(() => opacityLevel = 1.0);
   }
 
   @override

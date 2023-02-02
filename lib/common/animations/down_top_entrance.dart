@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
+// ignore: constant_identifier_names
+const DEFAULT_DELAY = Duration(milliseconds: 50);
+
 class DownTopEntrance extends StatefulWidget {
   final Widget child;
-  final Duration delay;
   final double downValue;
+  Duration? delay;
 
-  const DownTopEntrance({
+  DownTopEntrance({
     required this.child,
-    this.delay = const Duration(milliseconds: 50),
+    this.delay,
     this.downValue = 0.1,
     Key? key,
   }) : super(key: key);
@@ -29,7 +32,7 @@ class _DownTopEntranceState extends State<DownTopEntrance> {
   }
 
   void animate() async {
-    await Future.delayed(widget.delay);
+    await Future.delayed(widget.delay ?? DEFAULT_DELAY);
     if (mounted) setState(() => offset = const Offset(0, 0));
   }
 

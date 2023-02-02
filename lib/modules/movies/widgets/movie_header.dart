@@ -1,19 +1,21 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:cine_flutter/common/widgets/category_tag.dart';
-import 'package:cine_flutter/modules/movies/domain/enums/category.dart';
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 import 'package:cine_flutter/common/animations/down_top_entrance.dart';
+import 'package:cine_flutter/common/widgets/category_tag.dart';
 import 'package:cine_flutter/common/widgets/heading.dart';
+import 'package:cine_flutter/modules/movies/domain/enums/category.dart';
 import 'package:cine_flutter/modules/movies/domain/models/movie.dart';
-import 'package:ionicons/ionicons.dart';
 
 class MovieHeader extends StatelessWidget {
   final Movie? movie;
+  final Duration? animationDelay;
 
   const MovieHeader({
     Key? key,
     required this.movie,
+    this.animationDelay,
   }) : super(key: key);
 
   String get rate {
@@ -37,6 +39,7 @@ class MovieHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           DownTopEntrance(
+            delay: animationDelay,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

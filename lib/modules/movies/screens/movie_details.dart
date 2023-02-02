@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cine_flutter/common/widgets/blurred_background.dart';
+import 'package:cine_flutter/modules/movies/widgets/movie_details_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'package:cine_flutter/modules/movies/domain/models/movie.dart';
@@ -17,19 +18,12 @@ class MovieDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Hero(
-          tag: movie.thumbUrl,
-          child: CachedNetworkImage(
-            imageUrl: movie.thumbUrl,
-            progressIndicatorBuilder: (_, __, ___) {
-              return const Center(child: CircularProgressIndicator());
-            },
-            errorWidget: (_, __, ___) => const Icon(Icons.error),
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            fit: BoxFit.cover,
-          ),
+      body: BlurredBackground(
+        imgUrl: movie.thumbUrl,
+        child: CustomScrollView(
+          slivers: [
+            MovieDetailsAppBar(movie: movie),
+          ],
         ),
       ),
     );
