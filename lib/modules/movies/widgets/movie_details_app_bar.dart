@@ -71,8 +71,8 @@ class Overlay extends StatelessWidget {
               begin: Alignment(0.0, 0.5),
               end: Alignment(0.0, 0.0),
               colors: <Color>[
-                Color(0x60000000),
-                Color(0x00000000),
+                Color.fromRGBO(0, 0, 0, 0.46),
+                Color.fromRGBO(0, 0, 0, 0),
               ],
             ),
           ),
