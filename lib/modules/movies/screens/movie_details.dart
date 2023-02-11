@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:io';
+
 import 'package:cine_flutter/common/animations/down_top_entrance.dart';
 import 'package:cine_flutter/common/animations/fade_entrance.dart';
 import 'package:cine_flutter/common/widgets/blurred_background.dart';
@@ -61,7 +63,12 @@ class MovieDetails extends StatelessWidget {
               child: FadeEntrance(
                 delay: const Duration(milliseconds: 450),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 80),
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                    top: 20,
+                    bottom: Platform.isAndroid ? 80 : 120,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -69,7 +76,8 @@ class MovieDetails extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text(
                         movie.about,
-                        style: GoogleFonts.poppins(fontSize: 12, color: Colors.white),
+                        style: GoogleFonts.poppins(
+                            fontSize: 12, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
                       const Heading.middle("Cast"),
