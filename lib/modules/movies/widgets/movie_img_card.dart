@@ -17,11 +17,7 @@ class MovieImgCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final image = movie.thumbUrl;
 
-    if (image.isEmpty) {
-      return const Center(
-        child: CircularProgressIndicator(),
-      );
-    }
+    if (image.isEmpty) return const Center(child: CircularProgressIndicator());
 
     return Align(
       alignment: Alignment.bottomCenter,

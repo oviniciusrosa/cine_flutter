@@ -5,6 +5,7 @@ import 'package:cine_flutter/common/animations/down_top_entrance.dart';
 import 'package:cine_flutter/common/animations/fade_entrance.dart';
 import 'package:cine_flutter/common/widgets/blurred_background.dart';
 import 'package:cine_flutter/common/widgets/heading.dart';
+import 'package:cine_flutter/modules/buy/screens/buy_screen.dart';
 import 'package:cine_flutter/modules/movies/widgets/cast_list.dart';
 import 'package:cine_flutter/modules/movies/widgets/crew_list.dart';
 import 'package:cine_flutter/modules/movies/widgets/movie_details_app_bar.dart';
@@ -35,7 +36,7 @@ class MovieDetails extends StatelessWidget {
           elevation: 10,
           borderRadius: BorderRadius.circular(8),
           child: InkWell(
-            onTap: () {},
+            onTap: () => Navigator.pushNamed(context, BuyScreen.route),
             child: Container(
               alignment: Alignment.center,
               width: MediaQuery.of(context).size.width * 0.6,
@@ -76,8 +77,7 @@ class MovieDetails extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text(
                         movie.about,
-                        style: GoogleFonts.poppins(
-                            fontSize: 12, color: Colors.white),
+                        style: GoogleFonts.poppins(fontSize: 12, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
                       const Heading.middle("Cast"),
